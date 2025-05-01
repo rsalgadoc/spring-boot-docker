@@ -93,3 +93,14 @@ to test open
 ```bash
 curl localhost:8887/messages
 ```
+
+Spring Boot 2.3 added support for buildpacks. Put simply, instead of creating our own Dockerfile and building it using something like docker build, all we have to do is issue the following command:
+```bash
+mvn spring-boot:build-image
+```
+
+```bash
+docker run -it -p9099:8888 message-server:0.0.1-SNAPSHOT
+```
+
+localhost:9099/messages

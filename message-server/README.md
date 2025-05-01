@@ -53,6 +53,10 @@ sudo yum install maven
 git clone https://github.com/rsalgadoc/spring-boot-docker.git
 ```
 
+NOTE:  
+git pull is a convenient shortcut for completing both git fetch and git mergein the same command:
+
+
 ```bash
 cd  spring-boot-docker
 ```
@@ -72,4 +76,20 @@ java -jar target/message-server-0.0.1-SNAPSHOT.jar
 to test open a new terminal , add run:
 ```bash
 curl localhost:8888/messages
+```
+
+# Docker Compose
+
+```bash
+docker compose up -d
+```
+and to stop and remove 
+
+```bash
+docker compose down
+```
+
+to test open
+```bash
+curl localhost:8887/messages
 ```

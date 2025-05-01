@@ -27,11 +27,49 @@ open from localhost:8887/messages
 
 docker compose up -d
 
-and ro stop and remove 
+and to stop and remove 
 
- docker compose down
-
-
+docker compose down
 
 
+# On AWS
 
+If java no intalled, install:
+```bash
+sudo yum install java-17-amazon-corretto-devel
+```
+
+to remove run:
+
+sudo yum remove java-17-amazon-corretto-devel
+
+
+To install maven:
+```bash
+sudo yum install maven
+```
+
+```bash
+git clone https://github.com/rsalgadoc/spring-boot-docker.git
+```
+
+```bash
+cd  spring-boot-docker
+```
+
+```bash
+cd message-server/
+```
+
+```bash
+mvn clean package
+```
+
+```bash
+java -jar target/message-server-0.0.1-SNAPSHOT.jar
+```
+
+to test open a new terminal , add run:
+```bash
+curl localhost:8888/messages
+```
